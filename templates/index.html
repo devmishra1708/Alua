@@ -170,9 +170,9 @@
         <div id="nav_content">
             <img src="/static/assests/images/images.png" alt="Alua" style="height: 60px;">
             <a id="logo" style="padding-right: 50px;"><em style="color: #D6BD98;">Alua</em> Meeting</a>
-            <a>Home</a>
-            <a >Subscription</a>
-            <a>Contact Us</a>
+            <a href="blog">Blog</a>
+            <a href="support">Support</a>
+            <a href="contact">Contact Us</a>
             {% if user.is_authenticated %}
             <a href="logout">Logout</a>
             {% else %}
@@ -191,8 +191,8 @@
         <h1><em style="color: #D6BD98; font-weight: bold;">Alua </em> Meet: Simple, Versatile, and Always There – Just Like a <em style="color: #D6BD98; font-weight: bold;">Potato!</em></h1>
           
         <div class="meeting-options">
-            <a href="{% url 'meeting' %}" style="background-color: #091733; color: #fff;">New Meeting</a>
-            <a href="/join" style="background-color: #D6BD98; color: #091733;">Join Meeting</a>
+            <a href="/meeting" style="background-color: #091733; color: #fff;">New Meeting</a>
+            <a href="/meeting" style="background-color: #D6BD98; color: #091733;">Join Meeting</a>
         </div>
     </div>
 

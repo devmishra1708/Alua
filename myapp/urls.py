@@ -11,4 +11,7 @@ urlpatterns=[
     # path('vcapi',views.vcapi,name='vcapi'),
     path('joinroom',views.joinroom,name='joinroom'),
     path('meeting/', views.meeting_view, name='meeting'),
+    path('contact',views.contact,name='contact'),
+    path('support',views.support, name='support'),
+    path('blog',views.blog, name='blog'),
 ]

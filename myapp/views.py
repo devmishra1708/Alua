@@ -62,14 +62,23 @@ def logout(request):
     auth.logout(request)
     return redirect('/')   
 
-def contact(request):
-     pass
+
 
 
 def counter(request):
     text=request.POST['text']
     amount_of_word=len(text.split())
     return render(request,'counter.html',{'amount':amount_of_word})
+
+def contact(request):
+    return render(request,'contact.html')
+
+def support(request):
+    return render(request,'support.html')
+
+def blog(request):
+    return render(request,'blog.html')
+
 
 
 def meeting_view(request):
@@ -89,3 +98,4 @@ def meeting_view(request):
     else:
         print(response.status_code)
         return render(request, "error_page.html", {"error": "Failed to load the meeting. Please try again later."})
+    
