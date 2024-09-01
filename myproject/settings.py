@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6tlf*a_4*x1!g#t8m5$dgd5_7uceu#@mnn=f=(*(!!&r+-sckw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://alua-meeting2.pages.dev/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
