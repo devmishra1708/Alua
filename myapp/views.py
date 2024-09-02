@@ -81,7 +81,7 @@ def blog(request):
 
 
 
-def meeting_view(request):
+def meeting_view(request): # pass the room id from teh frontend
     url = "https://api.digitalsamba.com/api/v1/rooms/"
     token = "MWVlY2I2ZTAtY2UyNi00ZmMzLTgwNGItY2JjYTQzNWM0NjgyOllKQzlhS0F5VHhvcGw0cHhOYWEzMVBKbFR6YmFnR0E1UkZnSERaVGkxdWV0Z0FHcmpzdjJLRVcwWkluODVTS1g="
     
@@ -90,10 +90,15 @@ def meeting_view(request):
     }
     
     response = requests.get(url, headers=headers)
+
+    # print(response.json())
     
     if response.status_code == 200:
         data = response.json()
-        room_url = data["data"][0]["room_url"]
+
+        # filter out the room
+        # room_url = data["data"].filter(id == request.id)["room_url"]
+        room_url = data["data"][1]["room_url"]
         return redirect(room_url)
     else:
         print(response.status_code)
