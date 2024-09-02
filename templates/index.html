@@ -4,19 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    {% csrf_token %} 
+    {% csrf_token%}
     <style>
-        img{
-            padding-top: 10px;
-            height: 60px;
-            padding-left: 15px;
-            padding-right : 15px;
-            padding-bottom: 10px;
-            width: 60px;
-            float: left;
-            border-radius: 50%;
-        }
+        /* General Styles */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -43,8 +33,16 @@
         }
 
         #logo {
+            padding-right: 500px;
             font-size: 1.5rem;
             font-weight: bold;
+        }
+
+        img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
         }
 
         .caption {
@@ -73,6 +71,7 @@
             text-decoration: none;
             font-size: 1rem;
             margin: 10px;
+            text-align: center;
         }
 
         .about {
@@ -108,9 +107,8 @@
             color: #fff;
             font-size: 0.9rem;
         }
-        
 
-        
+        /* Responsive Styles */
         @media (min-width: 768px) {
             .caption h1 {
                 font-size: 2.5rem;
@@ -162,23 +160,62 @@
             }
         }
 
+        /* Mobile-specific Adjustments */
+        @media (max-width: 767px) {
+            #nav_content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #logo {
+                margin-bottom: 10px;
+            }
+
+            .caption h1, .caption h2 {
+                font-size: 1.5rem;
+                padding: 0 10px;
+            }
+
+            .meeting-options a {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .about div {
+                width: 100%;
+                text-align: left;
+            }
+
+            .about h3 {
+                font-size: 1.2rem;
+            }
+
+            .about p {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+
     </style>
-    
 </head>
 <body>
     <header>
         <div id="nav_content">
-            <img src="/static/assests/images/images.png" alt="Alua" style="height: 60px;">
-            <a id="logo" style="padding-right: 50px;"><em style="color: #D6BD98;">Alua</em> Meeting</a>
-            <a href="blog">Blog</a>
-            <a href="support">Support</a>
-            <a href="contact">Contact Us</a>
-            {% if user.is_authenticated %}
-            <a href="logout">Logout</a>
-            {% else %}
-            <a href="register">Login/sign up</a>
-            {% endif %}
-           
+            <img src="/static/assests/images/images.png" alt="Alua">
+            <a id="logo"><em style="color: #D6BD98;">Alua</em> Meeting</a>
+            <nav>
+                <a href="blog">Blog</a>
+                <a href="support">Support</a>
+                <a href="contact">Contact Us</a>
+                {% if user.is_authenticated %}
+                <a href="logout">Logout</a>
+                {% else %}
+                <a href="register">Login/sign up</a>
+                {% endif %}
+            </nav>
         </div>
     </header>
     
@@ -188,7 +225,7 @@
         {% else %}
         <h2>Welcome, Please login or sign up</h2>
         {% endif %}
-        <h1><em style="color: #D6BD98; font-weight: bold;">Alua </em> Meet: Simple, Versatile, and Always There – Just Like a <em style="color: #D6BD98; font-weight: bold;">Potato!</em></h1>
+        <h1><em style="color: #D6BD98; font-weight: bold;">Alua</em> Meet: Simple, Versatile, and Always There – Just Like a <em style="color: #D6BD98; font-weight: bold;">Potato!</em></h1>
           
         <div class="meeting-options">
             <a href="/meeting" style="background-color: #091733; color: #fff;">New Meeting</a>
