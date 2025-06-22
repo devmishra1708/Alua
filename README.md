@@ -19,16 +19,26 @@ It includes **real-time video calls**, **room creation**, and **user authenticat
 ## 📸 Screenshots
 
 ### 🔐 Login Page  
-![Login Page](https://raw.githubusercontent.com/devmishra1708/Alua/main/screenshots/login.png)
+
+![image](https://github.com/user-attachments/assets/549397e5-6f4e-4c0f-be43-74beb510f3d2)
+
 
 ### 🆕 Signup Page  
-![Signup Page](https://raw.githubusercontent.com/devmishra1708/Alua/main/screenshots/signup.png)
+
+![image](https://github.com/user-attachments/assets/e5e7454e-4445-43ed-a914-1a2b09d946b4)
+
 
 ### 🏠 Home Dashboard  
-![Home Page](https://raw.githubusercontent.com/devmishra1708/Alua/main/screenshots/home.png)
+
+![image](https://github.com/user-attachments/assets/f1206870-cc0f-42b7-99d0-648b020a3208)
+
 
 ### 🎥 Video Call Room  
-![Video Call Page](https://raw.githubusercontent.com/devmishra1708/Alua/main/screenshots/room.png)
+![image](https://github.com/user-attachments/assets/7b189294-b218-484b-9ef3-bf476da8a9c2)
+
+![image](https://github.com/user-attachments/assets/9af73c9e-4cad-40b6-b099-8799e0272bf5)
+
+
 
 ---
 
