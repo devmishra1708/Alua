@@ -2,7 +2,6 @@
 A full-stack web application for seamless **video conferencing**, built with **HTML/CSS** on the frontend and **Django (Python)** on the backend.  
 It includes **real-time video calls**, **room creation**, and **user authentication**, using external APIs to manage calls.
 
-![Alua Banner](https://raw.githubusercontent.com/devmishra1708/Alua/main/screenshots/banner.png)
 
 ---
 
@@ -56,3 +55,11 @@ It includes **real-time video calls**, **room creation**, and **user authenticat
    ```bash
    git clone https://github.com/devmishra1708/Alua.git
    cd Alua
+
+   python -m venv venv
+   # Activate on Linux/Mac
+   source venv/bin/activate
+   # Activate on Windows
+   venv\Scripts\activate
+   pip install -r requirements.txt
+   python manage.py runserver
